@@ -6,7 +6,7 @@
 /*   By: cvillalo <cvillalo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 12:20:29 by cvillalo          #+#    #+#             */
-/*   Updated: 2021/05/19 12:48:57 by cvillalo         ###   ########.fr       */
+/*   Updated: 2021/05/24 17:03:28 by cvillalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strchr(const char *s, int c)
 	int	x;
 
 	x = 0;
-	if (!s)
-		return (NULL);
 	while (s[x] != '\0')
 	{
 		if (s[x] == (char)c)

@@ -1,44 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cvillalo <cvillalo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/21 12:02:20 by cvillalo          #+#    #+#             */
-/*   Updated: 2021/05/24 17:45:29 by cvillalo         ###   ########.fr       */
+/*   Created: 2021/05/24 18:12:57 by cvillalo          #+#    #+#             */
+/*   Updated: 2021/05/24 18:33:10 by cvillalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	while (n > 0)
+	char	*sn;
+	size_t	i;
+
+	i = 0;
+	if (!s)
+		return (NULL);
+	if (*s == '\0')
+		return (ft_strdup(""));
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	sn = malloc (len + 1);
+	if (sn == NULL)
+		return (NULL);
+	while (i < len)
 	{
-		*(unsigned char *) s = 0;
-		n--;
-		s++;
+		sn [i] = s[start + i];
+		i++;
 	}
+	sn [i] = '\0';
+	return (sn);
 }
-
-/* int	main(void)
-{
-	char	str[] = "asdasdsada";
-	char	str2[] = "asdasdsada";
-	size_t	x;
-
-	x = 3;
-	bzero(str, x);
-	printf("%c ", str[5]);
-	ft_bzero(str2, x);
-	printf("%c ", str2[5]);
-	if (*str == *str2)
-	{
-		printf("Esta OK");
-		printf("\n");
-	}
-	else
-		printf("NO ESTA OK");
-	return (0);
-} */

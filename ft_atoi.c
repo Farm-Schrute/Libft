@@ -6,7 +6,7 @@
 /*   By: cvillalo <cvillalo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:09:01 by cvillalo          #+#    #+#             */
-/*   Updated: 2021/05/19 12:41:51 by cvillalo         ###   ########.fr       */
+/*   Updated: 2021/05/24 17:45:19 by cvillalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_atoi(const char *str)
 {
-	int	number;
-	int	neg;
+	long	number;
+	int		neg;
 
 	number = 0;
 	neg = 1;
@@ -32,12 +32,12 @@ int	ft_atoi(const char *str)
 		number = (number * 10) + *str - 48 ;
 		str++;
 	}
-	return (number * neg);
+	return ((int)(number * neg));
 }
 
 /* int	main (void)
 {
-	char str[] = "+-23";
+	char str[] = "-18446744073709551615";
 	printf("%d ",atoi(str));
 	printf("%d ",ft_atoi(str));
 	if (atoi(str) == ft_atoi(str))

@@ -1,44 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cvillalo <cvillalo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/21 12:02:20 by cvillalo          #+#    #+#             */
-/*   Updated: 2021/05/24 17:45:29 by cvillalo         ###   ########.fr       */
+/*   Created: 2021/05/24 18:46:32 by cvillalo          #+#    #+#             */
+/*   Updated: 2021/05/24 18:59:48 by cvillalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	while (n > 0)
-	{
-		*(unsigned char *) s = 0;
-		n--;
-		s++;
-	}
+	size_t	len;
+	char	*sn;
+
+	if (!s1 || !set)
+		return (NULL);
+	while (ft_strchr(set, *s1) && *s1 != '\0')
+		s1++;
+	if (*s1 == '\0')
+		return (ft_strdup(""));
+	len = ft_strlen(s1);
+	while (ft_strchr(set, s1[len]))
+		len--;
+	sn = ft_substr(s1, 0, len + 1);
+	return (sn);
 }
 
-/* int	main(void)
+/* int	main (void)
 {
-	char	str[] = "asdasdsada";
-	char	str2[] = "asdasdsada";
-	size_t	x;
+	char s1[] = "hola que tal hola";
+	char s2[] = "";
 
-	x = 3;
-	bzero(str, x);
-	printf("%c ", str[5]);
-	ft_bzero(str2, x);
-	printf("%c ", str2[5]);
-	if (*str == *str2)
-	{
-		printf("Esta OK");
-		printf("\n");
-	}
-	else
-		printf("NO ESTA OK");
+	printf("%s\n", ft_strtrim(s1, s2));
 	return (0);
 } */

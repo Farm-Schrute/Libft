@@ -6,24 +6,24 @@
 /*   By: cvillalo <cvillalo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 13:40:53 by cvillalo          #+#    #+#             */
-/*   Updated: 2021/05/21 13:49:16 by cvillalo         ###   ########.fr       */
+/*   Updated: 2021/05/24 17:45:53 by cvillalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t i;
-
-	i = 0;
-	while(i < len)
+	if ((unsigned char *)dst > (const unsigned char *)src)
 	{
-		*(unsigned char *)(dst + i) = *(unsigned char *)(src + i);
-		i++;
+		while (len--)
+			*(unsigned char *)(dst + len) = *(const unsigned char *)(src + len);
 	}
+	else if ((unsigned char *)dst < (const unsigned char *)src)
+		ft_memcpy(dst, src, len);
 	return (dst);
 }
-int main ()
+
+/* int main ()
 {
 	char	src[] = "asdasdsada";
 	char	dest[] = "hettyysdfsdfsdfsfsfsf";
@@ -40,4 +40,4 @@ int main ()
 	else
 		printf("NO ESTA OK");
 	return (0);
-}
+} */
