@@ -6,7 +6,7 @@
 /*   By: cvillalo <cvillalo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 11:40:57 by cvillalo          #+#    #+#             */
-/*   Updated: 2021/05/19 12:49:27 by cvillalo         ###   ########.fr       */
+/*   Updated: 2021/05/26 18:33:41 by cvillalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 	x = 0;
 	contador = 0;
+	if (!src)
+		return (0);
 	while (src[contador] != '\0')
 		contador++;
 	if (dstsize != 0)

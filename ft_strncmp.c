@@ -6,7 +6,7 @@
 /*   By: cvillalo <cvillalo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 10:55:33 by cvillalo          #+#    #+#             */
-/*   Updated: 2021/05/19 12:51:53 by cvillalo         ###   ########.fr       */
+/*   Updated: 2021/05/25 18:20:55 by cvillalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	x;
-
-	x = 0;
 	while (*s1 && (*s1 == *s2) && n > 0)
 	{
 		s1++;
