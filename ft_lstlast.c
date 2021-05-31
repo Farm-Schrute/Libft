@@ -6,7 +6,7 @@
 /*   By: cvillalo <cvillalo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 19:38:43 by cvillalo          #+#    #+#             */
-/*   Updated: 2021/05/28 19:46:48 by cvillalo         ###   ########.fr       */
+/*   Updated: 2021/05/31 18:01:56 by cvillalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	int	i;
-
-	i = 0;
 	while (lst)
 	{
 		lst = lst -> next;
