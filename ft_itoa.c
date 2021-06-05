@@ -6,7 +6,7 @@
 /*   By: cvillalo <cvillalo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 17:23:50 by cvillalo          #+#    #+#             */
-/*   Updated: 2021/05/27 18:28:00 by cvillalo         ###   ########.fr       */
+/*   Updated: 2021/06/05 10:38:17 by cvillalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,16 +59,3 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-
-/*  int main (void)
-{
-	char *s= ft_itoa(1051909799);
-	int i;
-
-	i = 0;
-	while (i < 10)
-	{
-		printf("%c\n",s[i]);
-		i++;;
-	}
-}  */

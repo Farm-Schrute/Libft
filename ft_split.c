@@ -6,7 +6,7 @@
 /*   By: cvillalo <cvillalo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 17:24:29 by cvillalo          #+#    #+#             */
-/*   Updated: 2021/05/27 17:22:53 by cvillalo         ###   ########.fr       */
+/*   Updated: 2021/06/05 10:38:00 by cvillalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,18 +81,3 @@ char	**ft_split(const char *s, char c)
 	strintab[i] = 0;
 	return (strintab);
 }
-
-/* int main (void)
-{
-char *s1 = "    split       this for   me  !       ";
-char **s2;
-int i = 0;
-
-s2 = ft_split(s1, ' ');
-
-while (i < 4)
-{
-	printf("%s\n", s2[i]);
-	i++;
-}
-}   */

@@ -6,7 +6,7 @@
 /*   By: cvillalo <cvillalo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 18:15:54 by cvillalo          #+#    #+#             */
-/*   Updated: 2021/05/28 18:25:14 by cvillalo         ###   ########.fr       */
+/*   Updated: 2021/06/05 11:06:35 by cvillalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,14 @@ void	ft_putnbr_fd(int n, int fd)
 		write(fd, &c, 1);
 		x = -x;
 	}
-	if (x > 0)
+	if (x >= 10)
 	{
 		ft_putnbr_fd((x / 10), fd);
-		c = (x % 10) + 48;
+		ft_putnbr_fd((x % 10), fd);
+	}
+	else
+	{
+		c = x + 48;
 		write(fd, &c, 1);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: cvillalo <cvillalo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 10:55:33 by cvillalo          #+#    #+#             */
-/*   Updated: 2021/05/25 18:20:55 by cvillalo         ###   ########.fr       */
+/*   Updated: 2021/06/05 10:37:54 by cvillalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (0);
 	return (*(unsigned char *)s1 - *(unsigned char *) s2);
 }
-
-/* int main(void)
-{
-	char *str1;
-	char *str2;
-	int x;
-
-	x = 60;
-	str1 = "asdasD";
-	str2 = "asdasd";
-	x = strncmp(str1,str2,x);
-	printf("el valor de x es: %d\n", x);
-	x = 60;
-	x = ft_strncmp(str1, str2, x);
-	printf("el valor de x es: %d\n", x);
-} */

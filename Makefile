@@ -43,8 +43,4 @@ bonus :		${OBJS} ${OBJS_BONUS}
 
 re:			fclean all 
 
-so:
-	$(CC) $(FLAGS) $(SRCS) $(SRCS_BONUS)
-	gcc -shared -o libft.so $(OBJS) $(OBJS_BONUS)
-
 .PHONY:			all clean fclean re bonus

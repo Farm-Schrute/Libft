@@ -18,25 +18,3 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
-
-int	main (void)
-{
-	char	c;
-	int		i;
-
-	i = -5;
-	while (i < 130)
-	{
-		c = i;
-		printf("%d ", isascii(c));
-		printf("%d ", ft_isascii(c));
-		printf("%c ", i);
-		if (isascii(c) == ft_isascii(c))
-			printf("Esta OK");
-		else
-			printf("No esta OK");
-		printf("\n");
-		i ++;
-	}
-	return (0);
-}

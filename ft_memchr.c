@@ -6,7 +6,7 @@
 /*   By: cvillalo <cvillalo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 15:56:53 by cvillalo          #+#    #+#             */
-/*   Updated: 2021/05/24 17:00:42 by cvillalo         ###   ########.fr       */
+/*   Updated: 2021/06/05 10:38:06 by cvillalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-/* int	main (void)
-{
-	char	str[] = "";
-	char	c;
-
-	c = 'x';
-	printf("%s ", memchr(str, c, 12));
-	printf("%s ", ft_memchr(str, c, 12));
-	if (memchr(str, c, 12) == ft_memchr(str, c, 12))
-		printf("ESTA OK\n");
-	else
-		printf("NO ESTA OK\n");
-	return (0);
-} */

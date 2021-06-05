@@ -6,7 +6,7 @@
 /*   By: cvillalo <cvillalo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 18:12:57 by cvillalo          #+#    #+#             */
-/*   Updated: 2021/05/24 18:33:10 by cvillalo         ###   ########.fr       */
+/*   Updated: 2021/06/05 11:41:32 by cvillalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,19 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*sn;
-	size_t	i;
+	char	*ns;
+	size_t	nlen;
 
-	i = 0;
 	if (!s)
-		return (NULL);
-	if (*s == '\0')
+		return (0);
+	if (ft_strlen(s) < start)
 		return (ft_strdup(""));
-	if (start > ft_strlen(s))
-		return (ft_strdup(""));
-	sn = malloc (len + 1);
-	if (sn == NULL)
-		return (NULL);
-	while (i < len)
-	{
-		sn [i] = s[start + i];
-		i++;
-	}
-	sn [i] = '\0';
-	return (sn);
+	nlen = ft_strlen(s + start);
+	if (nlen < len)
+		len = nlen;
+	ns = (char *)malloc(len + 1);
+	if (!ns)
+		return (0);
+	ft_strlcpy(ns, s + start, len + 1);
+	return (ns);
 }

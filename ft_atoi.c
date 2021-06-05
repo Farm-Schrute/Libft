@@ -6,7 +6,7 @@
 /*   By: cvillalo <cvillalo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:09:01 by cvillalo          #+#    #+#             */
-/*   Updated: 2021/05/27 17:23:32 by cvillalo         ###   ########.fr       */
+/*   Updated: 2021/06/05 10:38:33 by cvillalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,3 @@ int	ft_atoi(const char *str)
 	}
 	return ((int)(number * neg));
 }
-
-/* int	main (void)
-{
-	char str[] = "-18446744073709551615";
-	printf("%d ",atoi(str));
-	printf("%d ",ft_atoi(str));
-	if (atoi(str) == ft_atoi(str))
-		printf("Esta OK");
-	else
-		printf("No esta OK");
-} */

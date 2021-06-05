@@ -6,7 +6,7 @@
 /*   By: cvillalo <cvillalo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 10:54:10 by cvillalo          #+#    #+#             */
-/*   Updated: 2021/05/24 17:03:01 by cvillalo         ###   ########.fr       */
+/*   Updated: 2021/06/05 10:37:53 by cvillalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,26 +31,3 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)s + y);
 	return (NULL);
 }
-
-/* int main ( int argc, char *argv[])
-{
-	int i;
-	printf("\n---strchr---[string|strchr|yours]\n");
-
-	i = 0;
-	while (i < argc) 
-	{
-		printf("%p\n",strrchr(argv[i], 'c'));
-		printf("%p\n",ft_strrchr(argv[i], 'c'));
-		
-		if (strrchr(argv[i], 'c') == ft_strrchr(argv[i], 'c')) {
-			printf("Lo tienes bien\n");
-		} else {
-			printf("[%s|%p|%p]\n", argv[i], 
-				strchr(argv[i], 'c'), ft_strrchr(argv[i], 'c'));
-		}
-		i++;
-	}
-	printf("\n");
-
-} */

@@ -6,7 +6,7 @@
 /*   By: cvillalo <cvillalo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 13:07:25 by cvillalo          #+#    #+#             */
-/*   Updated: 2021/05/19 13:34:27 by cvillalo         ###   ########.fr       */
+/*   Updated: 2021/06/05 10:38:20 by cvillalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,3 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-
-/* int	main (void)
-{
-	char	c;
-
-	c = 'c';
-	printf("%d ", isalpha(c));
-	printf("%d ", ft_isalpha(c));
-	if (isalpha(c) == ft_isalpha(c))
-		printf("Esta OK");
-	else
-		printf("No esta OK");
-	return (0);
-} */
