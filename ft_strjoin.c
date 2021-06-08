@@ -6,7 +6,7 @@
 /*   By: cvillalo <cvillalo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 18:33:29 by cvillalo          #+#    #+#             */
-/*   Updated: 2021/06/05 11:04:00 by cvillalo         ###   ########.fr       */
+/*   Updated: 2021/06/08 15:48:29 by cvillalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 || !s2)
 		return (NULL);
 	t_len = (ft_strlen(s1) + ft_strlen(s2) + 1);
-	sn = malloc(t_len + 1);
+	sn = malloc(sizeof (char) * t_len + 1);
 	if (!sn)
 		return (NULL);
 	ft_strlcpy(sn, s1, t_len);

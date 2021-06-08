@@ -6,7 +6,7 @@
 /*   By: cvillalo <cvillalo@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:09:01 by cvillalo          #+#    #+#             */
-/*   Updated: 2021/06/05 10:38:33 by cvillalo         ###   ########.fr       */
+/*   Updated: 2021/06/08 15:58:48 by cvillalo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_atoi(const char *str)
 		number = (number * 10) + *str - 48 ;
 		if (number > 2147483648 && neg == -1)
 			return (0);
-		else if (number > 2147483648 && neg == 1)
+		else if (number > 2147483647 && neg == 1)
 			return (-1);
 		str++;
 	}
